@@ -26,3 +26,23 @@ body.noscroll {
 .fixed-wrapper .fixed-content {
   min-height: 100vh; /* this is the magic, actually bug abusing iOS here */
 }
+
+:root { 
+  box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
+
+:root, body {
+  margin: 0;
+  padding: 0;
+  border: initial;
+}
+
+body {
+  overflow: hidden;
+  width: 100lvw;
+  height: 100lvh;
+}
