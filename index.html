@@ -4,14 +4,24 @@
     <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>test</title>
   </head>
-  <style>    
+  <style>
+/*    
     body {
       overflow: hidden;
       height: 100dvh;
     }
+*/
+    @keyframes blink_input_opacity_to_prevent_scrolling_when_focus {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    .input--focused {
+        animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
+}    
   </style>
   <body>
     <div>測試page</div>
-    <textarea></textarea>
+    <input placeholder="Method 1" id="methodOne">
   </body>
 </html>
